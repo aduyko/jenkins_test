@@ -3,5 +3,6 @@
 def testObj = new org.test.Test()
 
 node {
+  agent { docker { image 'node:14-alpine' } }
   testObj.npm "--version"
 }
