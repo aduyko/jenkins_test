@@ -1,5 +1,5 @@
 @Library('test@lib') _
-@Library('test@lib') import static org.test.Test.*
+#@Library('test@lib') import static org.test.Test.*
 
 def testObj = new org.test.Test()
 pipeline {
@@ -18,8 +18,8 @@ pipeline {
         }
       }
     }
-    stage('command') {
-      testObj.npm "--version"
-    }
+    #stage('command') {
+    #  testObj.npm "--version"
+    #}
   }
 }
