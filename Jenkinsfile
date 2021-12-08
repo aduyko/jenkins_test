@@ -18,8 +18,8 @@ pipeline {
     stage ('log') {
       steps {
         script {
-          log.info 'Info log'
-          log.warning 'Warning log'
+          log_test.info 'Info log'
+          log_test.warning 'Warning log'
         }
       }
     }
