@@ -10,7 +10,12 @@ pipeline {
         sh 'npm --version'
       }
     }
-    stage('log') {
+  }
+}
+pipeline {
+  agent none
+  stages {
+    stage ('log') {
       steps {
         script {
           log.info 'Info log'
