@@ -1,0 +1,4 @@
+@Library('test@lib') _
+
+def testObj = new org.test.Test()
+testObj.npm "--version"
