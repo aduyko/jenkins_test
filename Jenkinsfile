@@ -1,5 +1,7 @@
 @Library('test@lib') _
+@Library('test@lib') import static org.test.Test.*
 
+def testObj = new org.test.Test()
 pipeline {
   agent { docker { image 'node:14-alpine' } }
   stages {
@@ -17,12 +19,7 @@ pipeline {
       }
     }
     stage('command') {
-      steps {
-        script {
-          def testObj = new org.test.Test()
-          testObj.npm("--version")
-        }
-      }
+      testObj.npm "--version"
     }
   }
 }
