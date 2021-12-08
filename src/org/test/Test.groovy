@@ -1,6 +1,8 @@
 package org.test
-class Test {
+class Test implements Serializable {
+  def steps
+  Test(steps) {this.steps = steps}
   static def npm(flags) {
-    script.sh "npm ${flags}"
+    steps.sh "npm ${flags}"
   }
 }
