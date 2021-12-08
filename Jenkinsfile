@@ -10,11 +10,6 @@ pipeline {
         sh 'npm --version'
       }
     }
-  }
-}
-pipeline {
-  agent none
-  stages {
     stage ('log') {
       steps {
         script {
